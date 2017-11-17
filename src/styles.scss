@@ -1,1 +1,47 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 /* You can add global styles to this file, and also import other style files */
+
+.flex{
+    display:flex;
+}
+/* align horizontal */
+.flex.center{
+    justify-content: center;
+}
+.flex.right{
+    justify-content: flex-end;
+}
+.flex.between{
+    justify-content: space-between;
+}
+.flex.around{
+    justify-content: space-around;
+}
+/* align vertical */
+.flex.top{
+    align-items:flex-start;
+}
+.flex.middle{
+    align-items:center;
+}
+.flex.bottom{
+    align-items:flex-end;
+}
+/* sort element */
+.flex.row{
+    flex-direction: row;
+}
+.flex.row-reverse{
+    flex-direction: row-reverse;
+}
+.flex.column{
+    flex-direction: column;
+}
+.flex.column-reverse{
+    flex-direction: column-reverse;
+}
+/* warp */
+.flex.warp{
+    flex-wrap: wrap;
+    align-content: space-around;
+}

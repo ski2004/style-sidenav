@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@mixin windows($type){
+  @if ($type==pc){
+    @media only screen and (min-width: 468px) and (max-width: 2024px){
+      @content
+    }
+  }@else if ($type==pad){
+    @media only screen and (min-width: 468px) and (max-width: 768px){
+      @content
+    }
+  }@else if ($type==mobile){
+    @media only screen and (max-width: 468px){
+      @content
+    }
+  }
+}

@@ -1,0 +1,99 @@
+@import "./_common.scss" ;
+
+
+.table {
+  width:100%;
+  font-size: 1.6rem;
+  word-break: break-all;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+table>tbody>tr:nth-of-type(odd) {
+  background-color: rgb(128,128,128);
+  color:white ;
+}
+table>tbody>tr:nth-of-type(even) {
+  background-color: rgb(42,42,42);
+  color:white ;
+}
+
+table>tbody>tr:nth-of-type(even)>td:before {
+  color: rgb(128,128,128);
+}
+
+table>tbody>tr:nth-of-type(odd)>td:before {
+  color: rgb(42,42,42);
+}
+
+
+
+.table td:before {
+  content: attr(scope) ;
+  text-align: left;
+  font-weight: bold;
+  width: 6.5em;
+  display: inline-block;
+  /* font-weight: bold; */
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th{
+  /* color:white; */
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: none;
+
+}
+.table>thead>tr>th {
+  vertical-align: bottom;
+  border-bottom: 2px solid rgb(128,128,128);
+  text-align: center;
+}
+
+.table th {
+  display: none;
+}
+.table td {
+  display: flex;
+  text-align: center;
+}
+
+/* [phone] 767 <= screen */
+@media (max-width: 767px)  {
+  .table>tbody>tr>.table-title{
+    background: rgba(255,178,0,1);
+
+    background: -moz-linear-gradient(top, rgba(255,178,0,1) 0%, rgba(218,124,0,1) 100%);
+
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,178,0,1)), color-stop(100%, rgba(218,124,0,1)));
+
+    background: -webkit-linear-gradient(top, rgba(255,178,0,1) 0%, rgba(218,124,0,1) 100%);
+
+    background: -o-linear-gradient(top, rgba(255,178,0,1) 0%, rgba(218,124,0,1) 100%);
+
+    background: -ms-linear-gradient(top, rgba(255,178,0,1) 0%, rgba(218,124,0,1) 100%);
+
+    background: linear-gradient(to bottom, rgba(255,178,0,1) 0%, rgba(218,124,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb200', endColorstr='#da7c00', GradientType=0 );
+
+    color: black;
+    font-weight: bolder;
+  }
+  .table>tbody>tr>.table-title::before{
+    color: black ;
+    font-weight: bolder;
+  }
+}
+/* pc */
+@media (min-width: 768px) {
+  .table td:before {
+      display: none;
+  }
+  .table th, .table td {
+      display: table-cell;
+  }
+
+}

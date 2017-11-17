@@ -1,0 +1,34 @@
+<app-header></app-header>
+<mat-sidenav-container class="example-container"  >
+  <div class="use-flexbox">
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+
+
+
+  <div mat-button (click)="sidenav.open()" class="menu write-vertical">選單</div>
+  <mat-sidenav #sidenav  class="example-sidenav">
+      <div class="logo" [routerLink]="['']" ></div>
+      <p>線上人數:10</p>
+      <button mat-menu-item (click)="sidenav.close();c.Page('/hall/member')" >組織</button>
+      <button mat-menu-item [matMenuTriggerFor]="menu">遊戲</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="sidenav.close();c.Page('/hall/setting')" >妞妞</button>
+          <button mat-menu-item (click)="sidenav.close();c.Page('/hall/setting')" >三公</button>
+        </mat-menu>
+      <button mat-menu-item (click)="sidenav.close();c.Page('/hall/report')" >報表</button>
+      <button mat-menu-item (click)="sidenav.close();c.Page('/hall/account')" >帳戶</button>
+      <button mat-menu-item (click)="sidenav.close()" >登出</button>
+  </mat-sidenav>
+</mat-sidenav-container>
+
+
+
+
+
+
+
+
+

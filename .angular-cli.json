@@ -19,7 +19,10 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.scss"
+        "styles.scss",
+        "assets/css/common.scss",
+        "assets/css/style.scss",
+        "assets/css/table.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
@@ -55,6 +58,9 @@
   },
   "defaults": {
     "styleExt": "scss",
-    "component": {}
+    "component": {},
+    "build": {
+      "showCircularDependencies": false
+    }
   }
 }
